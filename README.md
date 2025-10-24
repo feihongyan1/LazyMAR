@@ -56,11 +56,13 @@ Download pre-trained VAE and LazyMAR models (weights are provided by [MAR](https
 
 | LazyMAR Model | FID-50K | Inception Score | #params | Download Link |
 |---------------|---------|-----------------|---------|---------------|
-| [LazyMAR-B](https://www.dropbox.com/scl/fi/f6dpuyjb7fudzxcyhvrhk/checkpoint-last.pth?rlkey=a6i4bo71vhfo4anp33n9ukujb&dl=0) | 2.31 | 281.7 | 208M | [Dropbox](https://www.dropbox.com/scl/fi/f6dpuyjb7fudzxcyhvrhk/checkpoint-last.pth?rlkey=a6i4bo71vhfo4anp33n9ukujb&dl=0) |
-| [LazyMAR-L](https://www.dropbox.com/scl/fi/pxacc5b2mrt3ifw4cah6k/checkpoint-last.pth?rlkey=m48ovo6g7ivcbosrbdaz0ehqt&dl=0) | 1.78 | 296.0 | 479M | [Dropbox](https://www.dropbox.com/scl/fi/pxacc5b2mrt3ifw4cah6k/checkpoint-last.pth?rlkey=m48ovo6g7ivcbosrbdaz0ehqt&dl=0) |
-| [LazyMAR-H](https://www.dropbox.com/scl/fi/1qmfx6fpy3k7j9vcjjs3s/checkpoint-last.pth?rlkey=4lae281yzxb406atp32vzc83o&dl=0) | 1.55 | 303.7 | 943M | [Dropbox](https://www.dropbox.com/scl/fi/1qmfx6fpy3k7j9vcjjs3s/checkpoint-last.pth?rlkey=4lae281yzxb406atp32vzc83o&dl=0) |
+| [LazyMAR-B](https://www.dropbox.com/scl/fi/f6dpuyjb7fudzxcyhvrhk/checkpoint-last.pth?rlkey=a6i4bo71vhfo4anp33n9ukujb&dl=0) | 2.45 | 281.3 | 208M | [Dropbox](https://www.dropbox.com/scl/fi/f6dpuyjb7fudzxcyhvrhk/checkpoint-last.pth?rlkey=a6i4bo71vhfo4anp33n9ukujb&dl=0) |
+| [LazyMAR-L](https://www.dropbox.com/scl/fi/pxacc5b2mrt3ifw4cah6k/checkpoint-last.pth?rlkey=m48ovo6g7ivcbosrbdaz0ehqt&dl=0) | 1.93 | 297.4 | 479M | [Dropbox](https://www.dropbox.com/scl/fi/pxacc5b2mrt3ifw4cah6k/checkpoint-last.pth?rlkey=m48ovo6g7ivcbosrbdaz0ehqt&dl=0) |
+| [LazyMAR-H](https://www.dropbox.com/scl/fi/1qmfx6fpy3k7j9vcjjs3s/checkpoint-last.pth?rlkey=4lae281yzxb406atp32vzc83o&dl=0) | 1.69 | 299.2 | 943M | [Dropbox](https://www.dropbox.com/scl/fi/1qmfx6fpy3k7j9vcjjs3s/checkpoint-last.pth?rlkey=4lae281yzxb406atp32vzc83o&dl=0) |
 
-Place the downloaded checkpoints in `pretrained_models/mar/` directory:
+**VAE Model**: Download the pre-trained VAE model from [Dropbox](https://www.dropbox.com/scl/fi/hhmuvaiacrarfg28qxhwz/kl16.ckpt?rlkey=l44xipsezc8atcffdp4q7mwmh&dl=0)
+
+Place the downloaded checkpoints in `pretrained_models/` directory:
 ```
 pretrained_models/
 ├── mar/
@@ -127,21 +129,12 @@ LazyMAR achieves significant speedup while maintaining generation quality on Ima
 | **MAR-B** | 0.47s | 28.97s | 15.49T | 1.00× | 2.32 | 281.1 |
 | **LazyMAR-B** | **0.21s** | **11.08s** | **5.54T** | **2.80×** | **2.45** | **281.3** |
 
-### Key Highlights
-
-- ⚡ **2.83× faster** than baseline MAR-H on GPU (1.74s → 0.75s)
-- 💾 **64.7% reduction** in FLOPs (69.06T → 24.38T)
-- 🎯 **Minimal quality loss**: FID increases by only 0.10 (1.59 → 1.69)
-- 📈 **Improved diversity**: Inception Score maintained or improved across all models
-- 🔌 **Training-free**: No retraining required, directly applicable to pre-trained MAR models
-
 ## 🎯 Key Features
 
-- **Training-Free**: No additional training required, directly applicable to pre-trained MAR models
-- **Plug-and-Play**: Simple integration with existing MAR architectures via `--lazy_mar` flag
-- **High Acceleration**: Achieves 2.83× speedup with negligible quality loss
-- **Dual Caching Mechanisms**: Leverages both token redundancy and condition redundancy
-- **Memory Efficient**: Intelligent caching reduces redundant computations
+- **⚡ High Acceleration**: Achieves 2.83× speedup with 64.7% FLOPs reduction and minimal quality loss
+- **🔌 Training-Free & Plug-and-Play**: No retraining required, simple integration via `--lazy_mar` flag
+- **💡 Dual Caching Mechanisms**: Leverages both token redundancy and condition redundancy
+- **💾 Memory Efficient**: Intelligent caching reduces redundant computations
 
 ## 👍 Acknowledgements
 
