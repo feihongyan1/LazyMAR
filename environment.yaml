@@ -1,4 +1,4 @@
-name: mar
+name: lazymar
 channels:
   - pytorch
   - defaults

@@ -5,7 +5,7 @@
 ## <font size=6>🎉 Accepted to ICCV 2025 🎉</font>
 
 <p>
-<a href='https://arxiv.org/abs/2503.12450'><img src='https://img.shields.io/badge/Paper-arXiv-red'></a>
+<a href='https://openaccess.thecvf.com/content/ICCV2025/html/Yan_LazyMAR_Accelerating_Masked_Autoregressive_Models_via_Feature_Caching_ICCV_2025_paper.html'><img src='https://img.shields.io/badge/Paper-ICCV2025-red'></a>
 <a href='https://github.com/feihongyan1/LazyMAR'><img src='https://img.shields.io/badge/Code-GitHub-green'></a>
 <a href='https://iccv2025.thecvf.com/'><img src='https://img.shields.io/badge/ICCV-2025-blue'></a>
 </p>
@@ -43,16 +43,16 @@ cd LazyMAR
 
 ### Environment Setup
 
-A suitable [conda](https://conda.io/) environment named `mar` can be created and activated with:
+A suitable [conda](https://conda.io/) environment named `lazymar` can be created and activated with:
 
 ```bash
 conda env create -f environment.yaml
-conda activate mar
+conda activate lazymar
 ```
 
 ### Pre-trained Models
 
-Download pre-trained VAE and LazyMAR models:
+Download pre-trained VAE and LazyMAR models (weights are provided by [MAR](https://github.com/LTH14/mar)):
 
 | LazyMAR Model | FID-50K | Inception Score | #params | Download Link |
 |---------------|---------|-----------------|---------|---------------|
@@ -148,26 +148,30 @@ LazyMAR achieves significant speedup while maintaining generation quality on Ima
 - Thanks to [MAR](https://github.com/LTH14/mar) for their great work and codebase upon which we build LazyMAR.
 - Thanks to the community for the pre-trained VAE models.
 
+## 📧 Contact
+
+If you have any questions, feel free to contact us through email: 
+
+**📮 [3120235162@bit.edu.cn](mailto:3120235162@bit.edu.cn)**
+
 ## 📌 Citation
 
 If you find our work useful, please consider citing:
 
 ```bibtex
-@article{yan2025lazymar,
-  title={Lazymar: Accelerating masked autoregressive models via feature caching},
-  author={Yan, Feihong and Wei, Qingyan and Tang, Jiayi and Li, Jiajun and Wang, Yulin and Hu, Xuming and Li, Huiqi and Zhang, Linfeng},
-  journal={arXiv preprint arXiv:2503.12450},
-  year={2025}
+@InProceedings{Yan_2025_ICCV,
+    author    = {Yan, Feihong and Wei, Qingyan and Tang, Jiayi and Li, Jiajun and Wang, Yulin and Hu, Xuming and Li, Huiqi and Zhang, Linfeng},
+    title     = {LazyMAR: Accelerating Masked Autoregressive Models via Feature Caching},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2025},
+    pages     = {15552-15561}
 }
 ```
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 📧 Contact
-
-If you have any questions, feel free to contact us through email: [3120235162@bit.edu.cn](mailto:3120235162@bit.edu.cn)
 
 Enjoy!
 
